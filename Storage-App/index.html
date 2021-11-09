@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="form">
+        <span><input id="input" type="text" placeholder="Назва"></span>
+        <span>
+            <select name="litres" id="litres">
+                <option>0,5 л</option>
+                <option>0,7 л</option>
+                <option>1 л</option>
+                <option>1,2 л</option>
+                <option>1,5 л</option>
+                <option>2 л</option>
+                <option>2,5 л</option>
+            </select>
+        </span>
+        <span><input  id="amount" type="number" min="0" oninput="validity.valid||(value='')"
+                placeholder="Кількість"></span>
+        <span><input id="price" type="number"
+                placeholder="Ціна"></span>
+
+        <span><button onclick="search()" class="search">ПОШУК</button></span>
+        <span><button class="add" onclick="add()">ДОДАТИ</button></span>
+        <span><button style="display: none;" onclick="cancel()" id="cancel">Скасувати</button></span>
+        <span><button id="clear" onclick="clearStorage()">*очистити*</button></span>
+    </div>
+    <hr>
+    <p style="font-size: large;" id="priceResult"></p>
+    <hr>
+
+    <div class="scrool">
+        <table id="result">
+
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
